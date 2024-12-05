@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:mini_project/core.dart';
 
 class ListPictureController extends GetxController {
-  var pictures = <Map<dynamic, dynamic>>[].obs;  // Pastikan tipe data yang digunakan sesuai
+  var pictures = <Map<dynamic, dynamic>>[].obs;
   var isLoading = false.obs;
 
   @override
@@ -15,10 +15,10 @@ class ListPictureController extends GetxController {
     isLoading(true);
     try {
       var response = await PictureService().getPictures();
-
       pictures.assignAll(List<Map<dynamic, dynamic>>.from(response));
+      print("Pictures Loaded: ${pictures.length} items");  // Log jumlah gambar yang dimuat
     } catch (e) {
-      print("Error fetching pictures: $e");
+      print("Error in fetchPictures: $e");  // Log error jika ada masalah
     } finally {
       isLoading(false);
     }

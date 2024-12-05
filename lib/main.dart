@@ -3,6 +3,11 @@ import 'package:get/get.dart';
 import 'package:mini_project/core.dart';
 
 void main() {
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.dumpErrorToConsole(details);
+    print("Flutter Error: ${details.exceptionAsString()}");
+  };
+
   runApp(MyApp());
 }
 
