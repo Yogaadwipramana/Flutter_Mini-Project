@@ -5,6 +5,13 @@ class PictureBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ListPictureController>(() => ListPictureController());
+  }
+}
+
+class DetailPictureBinding extends Bindings {
+  @override
+  void dependencies() {
     Get.lazyPut<DetailPictureController>(() => DetailPictureController());
   }
 }
+
