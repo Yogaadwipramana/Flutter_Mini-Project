@@ -3,8 +3,8 @@ import 'package:dio/dio.dart';
 class PictureService {
   final Dio _dio = Dio(
     BaseOptions(
-      connectTimeout: const Duration(seconds: 5),  // Timeout koneksi dalam Duration
-      receiveTimeout: const Duration(seconds: 5),  // Timeout menerima data dalam Duration
+      connectTimeout: const Duration(seconds: 5),  
+      receiveTimeout: const Duration(seconds: 5),  
     ),
   );
 

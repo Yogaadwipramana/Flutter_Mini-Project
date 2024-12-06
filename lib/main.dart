@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           GetPage(
             name: '/detail',
             page: () => DetailPictureView(),
-            binding: DetailPictureBinding(), // Gunakan Binding terpisah
+            binding: DetailPictureBinding(), 
           ),
         ]);
   }

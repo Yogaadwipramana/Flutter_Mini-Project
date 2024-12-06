@@ -16,9 +16,9 @@ class ListPictureController extends GetxController {
     try {
       var response = await PictureService().getPictures();
       pictures.assignAll(List<Map<dynamic, dynamic>>.from(response));
-      print("Pictures Loaded: ${pictures.length} items");  // Log jumlah gambar yang dimuat
+      print("Pictures Loaded: ${pictures.length} items");  
     } catch (e) {
-      print("Error in fetchPictures: $e");  // Log error jika ada masalah
+      print("Error in fetchPictures: $e"); 
     } finally {
       isLoading(false);
     }
